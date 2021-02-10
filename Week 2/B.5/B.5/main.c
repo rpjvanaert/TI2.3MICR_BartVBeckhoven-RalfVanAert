@@ -6,6 +6,7 @@
  */ 
 
 #include <xc.h>
+#include "micr_lcd.h"
 
 int main(void)
 {
