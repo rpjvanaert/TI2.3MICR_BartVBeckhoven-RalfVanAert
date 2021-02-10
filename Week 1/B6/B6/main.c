@@ -40,9 +40,9 @@ int main(void)
     {		
 		int valPinC0 = PINC;
 		
-		if (valPinC0 != prevValPinC0)
+		if (valPinC0 == 1 && prevValPinC0 == 0)
 		{
-			prevValPinC0 = valPinC0;
+			
 			
 			if (currentHz == 1)
 			{
@@ -52,6 +52,7 @@ int main(void)
 				currentHz = 1;
 			}
 		}
+		prevValPinC0 = valPinC0;
 		
 		PORTD = 0x80;
 		waitHz(currentHz);
