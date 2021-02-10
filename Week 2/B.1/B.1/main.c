@@ -42,8 +42,14 @@ outputs:
 notes:			Set PORTD.5
 Version :    	DMK, Initial code
 *******************************************************************/
-ISR( INT0_vect ) {
-    PORTD |= (1<<5);		
+ISR( INT2_vect ) {
+    if (PORTC >= 0x80)
+    {
+	    PORTC = 0x01;
+    } else
+    {
+	    PORTC <<= 1;
+    }
 }
 
 /******************************************************************
@@ -54,31 +60,37 @@ notes:			Clear PORTD.5
 Version :    	DMK, Initial code
 *******************************************************************/
 ISR( INT1_vect ) {
-    PORTD &= ~(1<<5);		
+    if (PORTC >= 0x80)
+    {
+	    PORTC = 0x01;
+    } else
+    {
+	    PORTC <<= 1;
+    }		
 }
 
 /******************************************************************
 short:			main() loop, entry point of executable
 inputs:
-outputs:
+outputs:s
 notes:			Slow background task after init ISR
 Version :    	DMK, Initial code
 *******************************************************************/
 int main( void ) {
 	// Init I/O
-	DDRD = 0xF0;			// PORTD(7:4) output, PORTD(3:0) input	
+	DDRC = 0xFF;			// PORTC(7:0) output
 
 	// Init Interrupt hardware
-	EICRA |= 0x0B;			// INT1 falling edge, INT0 rising edge
-	EIMSK |= 0x03;			// Enable INT1 & INT0
+	EICRA |= 0x3C;			// INT1 rising edge, INT2 rising edge
+	EIMSK |= 0x06;			// Enable INT1 & INT2
 	
 	// Enable global interrupt system
 	//SREG = 0x80;			// Of direct via SREG of via wrapper
-	sei();				
+	sei();	
+	
+	PORTC = 0b1;			
 
-	while (1) {
-		PORTD ^= (1<<7);	// Toggle PORTD.7
-		wait( 500 );								
+	while (1) {							
 	}
 
 	return 1;
