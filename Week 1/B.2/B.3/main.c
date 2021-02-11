@@ -17,13 +17,13 @@ void wait(int ms){
 
 int main(void)
 {
-	DDRD = 0b11111111;
+	DDRD = 0b11111111; //make all D ports output
 	
     while(1)
     {
-	PORTD = 0x80;
+	PORTD = 0x80; // put on only led 7
 	wait(500);
-	PORTD = 0x40;
+	PORTD = 0x40; // put on only led 6
 	wait(500);
     }
 	
