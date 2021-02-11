@@ -18,21 +18,13 @@ void wait(int ms){
 int main(void)
 {
 	DDRD = 0b11111111;
-	DDRC = 0x00;
 	
     while(1)
     {
-        int value = PINC0;
-		
-		if (value == 1){
-			PORTD = 0x80;
-			wait(250)
-			PORTD = 0x00;
-		}
-		
-		wait(250);
-		
-		
+	PORTD = 0x80;
+	wait(500);
+	PORTD = 0x40;
+	wait(500);
     }
 	
 	return 1;
