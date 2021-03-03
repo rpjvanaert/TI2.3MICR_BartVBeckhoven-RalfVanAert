@@ -77,6 +77,9 @@ void set_cursor(int position){
 }
 
 void lcd_clear() {
+	lcd_write_command(0x01);
+	
+	/*
 	PORTC = 0x00;
 	lcd_strobe_lcd_e();
 	PORTC = 0x01;
@@ -85,4 +88,5 @@ void lcd_clear() {
 	lcd_strobe_lcd_e();
 	PORTC = 0x02;
 	lcd_strobe_lcd_e();
+	*/
 }

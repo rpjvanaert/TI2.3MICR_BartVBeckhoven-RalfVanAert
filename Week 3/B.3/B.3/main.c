@@ -64,23 +64,5 @@ int main( void ) {
 		setRed( 0 );
 		delta = 1;
 		wait(100);
-
-		// GREEN
-		// for (int gr = 0; gr<=255; gr+=delta)
-		// . . .
-
-		// BLUE
-		// for (int blue = 0; blue<=255; blue+=delta)
-		// . . .
-
-
-		// YELLOW
-		// for (int yellow= 0; yellow<=255; yellow += delta)
-		// . . .
-
-
-		// WHITE
-		// for (int white = 0; white<=255; white += delta)
-		// . . .
 	}
 }

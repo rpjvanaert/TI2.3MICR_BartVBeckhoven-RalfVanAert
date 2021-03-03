@@ -13,6 +13,8 @@
 
 int main(void)
 {
+	lcd_clear();
+	_delay_ms(250);
 	init();
 	_delay_ms( 250 );
 	lcd_write_command(0x02);
