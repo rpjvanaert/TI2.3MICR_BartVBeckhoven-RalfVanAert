@@ -1,0 +1,357 @@
+
+Eindopdracht.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  0000025a  2**0
+                  ALLOC, LOAD, DATA
+  1 .text         000000ea  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000004  00800100  00800100  0000025a  2**0
+                  ALLOC
+  3 .comment      0000002f  00000000  00000000  0000025a  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000048  00000000  00000000  00000289  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000c7a  00000000  00000000  000002d1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000886  00000000  00000000  00000f4b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   0000037c  00000000  00000000  000017d1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000074  00000000  00000000  00001b50  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000027d  00000000  00000000  00001bc4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000000dc  00000000  00000000  00001e41  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000038  00000000  00000000  00001f1d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .text         00000004  000001e2  000001e2  00000256  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00001f58  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .text.wait    0000001e  0000018e  0000018e  00000202  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 15 .text.adc_set_port 00000006  000001dc  000001dc  00000250  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.adc_read_port 00000014  000001c8  000001c8  0000023c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.servos_init 00000038  00000156  00000156  000001ca  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.servoSpeed 0000001c  000001ac  000001ac  00000220  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.main    0000006c  000000ea  000000ea  0000015e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 49 00 	jmp	0x92	; 0x92 <__ctors_end>
+   4:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+   8:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+   c:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  10:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  14:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  18:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  1c:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  20:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  24:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  28:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  2c:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  30:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  34:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  38:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  3c:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  40:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  44:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  48:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  4c:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  50:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  54:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  58:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  5c:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  60:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  64:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  68:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  6c:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  70:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  74:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  78:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  7c:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  80:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  84:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+  88:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <__bad_interrupt>
+
+0000008c <.dinit>:
+  8c:	01 00       	.word	0x0001	; ????
+  8e:	01 04       	cpc	r0, r1
+  90:	80 00       	.word	0x0080	; ????
+
+00000092 <__ctors_end>:
+  92:	11 24       	eor	r1, r1
+  94:	1f be       	out	0x3f, r1	; 63
+  96:	cf ef       	ldi	r28, 0xFF	; 255
+  98:	d0 e1       	ldi	r29, 0x10	; 16
+  9a:	de bf       	out	0x3e, r29	; 62
+  9c:	cd bf       	out	0x3d, r28	; 61
+
+0000009e <__do_copy_data>:
+  9e:	ec e8       	ldi	r30, 0x8C	; 140
+  a0:	f0 e0       	ldi	r31, 0x00	; 0
+  a2:	40 e0       	ldi	r20, 0x00	; 0
+  a4:	19 c0       	rjmp	.+50     	; 0xd8 <__do_clear_bss+0x8>
+  a6:	b7 91       	elpm	r27, Z+
+  a8:	a7 91       	elpm	r26, Z+
+  aa:	37 91       	elpm	r19, Z+
+  ac:	27 91       	elpm	r18, Z+
+  ae:	07 91       	elpm	r16, Z+
+  b0:	07 fd       	sbrc	r16, 7
+  b2:	0e c0       	rjmp	.+28     	; 0xd0 <__do_clear_bss>
+  b4:	97 91       	elpm	r25, Z+
+  b6:	87 91       	elpm	r24, Z+
+  b8:	ef 01       	movw	r28, r30
+  ba:	f9 2f       	mov	r31, r25
+  bc:	e8 2f       	mov	r30, r24
+  be:	0b bf       	out	0x3b, r16	; 59
+  c0:	07 90       	elpm	r0, Z+
+  c2:	0d 92       	st	X+, r0
+  c4:	a2 17       	cp	r26, r18
+  c6:	b3 07       	cpc	r27, r19
+  c8:	d9 f7       	brne	.-10     	; 0xc0 <__do_copy_data+0x22>
+  ca:	fe 01       	movw	r30, r28
+  cc:	1b be       	out	0x3b, r1	; 59
+  ce:	04 c0       	rjmp	.+8      	; 0xd8 <__do_clear_bss+0x8>
+
+000000d0 <__do_clear_bss>:
+  d0:	1d 92       	st	X+, r1
+  d2:	a2 17       	cp	r26, r18
+  d4:	b3 07       	cpc	r27, r19
+  d6:	e1 f7       	brne	.-8      	; 0xd0 <__do_clear_bss>
+  d8:	e1 39       	cpi	r30, 0x91	; 145
+  da:	f4 07       	cpc	r31, r20
+  dc:	21 f7       	brne	.-56     	; 0xa6 <__do_copy_data+0x8>
+  de:	0e 94 75 00 	call	0xea	; 0xea <_etext>
+  e2:	0c 94 73 00 	jmp	0xe6	; 0xe6 <_exit>
+
+000000e6 <_exit>:
+  e6:	f8 94       	cli
+
+000000e8 <__stop_program>:
+  e8:	ff cf       	rjmp	.-2      	; 0xe8 <__stop_program>
+
+Disassembly of section .text:
+
+000001e2 <__bad_interrupt>:
+ 1e2:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+Disassembly of section .text.wait:
+
+0000018e <wait>:
+#define ADC_TO_SERVO_FACTOR 10
+
+// wait busy waiting for ms in milliseconds
+void wait( int ms )
+{
+	for (int tms=0; tms<ms; tms++)
+ 18e:	20 e0       	ldi	r18, 0x00	; 0
+ 190:	30 e0       	ldi	r19, 0x00	; 0
+ 192:	08 c0       	rjmp	.+16     	; 0x1a4 <wait+0x16>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 194:	ef ec       	ldi	r30, 0xCF	; 207
+ 196:	f7 e0       	ldi	r31, 0x07	; 7
+ 198:	31 97       	sbiw	r30, 0x01	; 1
+ 19a:	f1 f7       	brne	.-4      	; 0x198 <wait+0xa>
+ 19c:	00 c0       	rjmp	.+0      	; 0x19e <wait+0x10>
+ 19e:	00 00       	nop
+ 1a0:	2f 5f       	subi	r18, 0xFF	; 255
+ 1a2:	3f 4f       	sbci	r19, 0xFF	; 255
+ 1a4:	28 17       	cp	r18, r24
+ 1a6:	39 07       	cpc	r19, r25
+ 1a8:	ac f3       	brlt	.-22     	; 0x194 <wait+0x6>
+	{
+		_delay_ms( 1 );
+	}
+}
+ 1aa:	08 95       	ret
+
+Disassembly of section .text.adc_set_port:
+
+000001dc <adc_set_port>:
+
+// Initialize ADC for given pin (0b0000 or 0b0001)
+void adc_set_port( int bit )
+{
+	ADMUX = (0b01100000 | bit); // AREF = VCC, result left adjusted, channel1 at PF1.
+ 1dc:	80 66       	ori	r24, 0x60	; 96
+ 1de:	87 b9       	out	0x07, r24	; 7
+ 1e0:	08 95       	ret
+
+Disassembly of section .text.adc_read_port:
+
+000001c8 <adc_read_port>:
+}
+
+// Method that sets adc port, reads adc on that port and then returns value of the port
+int adc_read_port ( int bit )
+{
+	adc_set_port(bit);			// Set port to bit ( PF0 to PF5)
+ 1c8:	0e 94 ee 00 	call	0x1dc	; 0x1dc <adc_set_port>
+	ADCSRA |= BIT(6);			// Start ADC
+ 1cc:	86 b1       	in	r24, 0x06	; 6
+ 1ce:	80 64       	ori	r24, 0x40	; 64
+ 1d0:	86 b9       	out	0x06, r24	; 6
+	while (ADCSRA & BIT(6));	// Wait for completion
+ 1d2:	36 99       	sbic	0x06, 6	; 6
+ 1d4:	fe cf       	rjmp	.-4      	; 0x1d2 <adc_read_port+0xa>
+	return ADCH;				// Return MSB (bit 9:2) of ADC
+ 1d6:	85 b1       	in	r24, 0x05	; 5
+}
+ 1d8:	90 e0       	ldi	r25, 0x00	; 0
+ 1da:	08 95       	ret
+
+Disassembly of section .text.servos_init:
+
+00000156 <servos_init>:
+
+// Initialize PWM for servos
+void servos_init( void )
+{	
+	// Set ports to output
+	DDRB = 0xFF;
+ 156:	8f ef       	ldi	r24, 0xFF	; 255
+ 158:	87 bb       	out	0x17, r24	; 23
+	DDRE = 0xFF;
+ 15a:	82 b9       	out	0x02, r24	; 2
+	
+	
+	ICR1 = F_CPU / SERVO_FREQ;
+ 15c:	8f ef       	ldi	r24, 0xFF	; 255
+ 15e:	9f ef       	ldi	r25, 0xFF	; 255
+ 160:	97 bd       	out	0x27, r25	; 39
+ 162:	86 bd       	out	0x26, r24	; 38
+	ICR3 = F_CPU / SERVO_FREQ;
+ 164:	90 93 81 00 	sts	0x0081, r25	; 0x800081 <__TEXT_REGION_LENGTH__+0x7e0081>
+ 168:	80 93 80 00 	sts	0x0080, r24	; 0x800080 <__TEXT_REGION_LENGTH__+0x7e0080>
+	
+	// Set PWM's to min value of servos
+	OCR1A = SERVO_MIN_STATE;
+ 16c:	88 ee       	ldi	r24, 0xE8	; 232
+ 16e:	93 e0       	ldi	r25, 0x03	; 3
+ 170:	9b bd       	out	0x2b, r25	; 43
+ 172:	8a bd       	out	0x2a, r24	; 42
+	OCR3A = SERVO_MIN_STATE;
+ 174:	90 93 87 00 	sts	0x0087, r25	; 0x800087 <__TEXT_REGION_LENGTH__+0x7e0087>
+ 178:	80 93 86 00 	sts	0x0086, r24	; 0x800086 <__TEXT_REGION_LENGTH__+0x7e0086>
+	
+	// Init Timer1
+	TCCR1A = 1<<COM1A1 | 1<<WGM11;
+ 17c:	92 e8       	ldi	r25, 0x82	; 130
+ 17e:	9f bd       	out	0x2f, r25	; 47
+	TCCR1B = 1<<WGM13 | 1<<WGM12 | 1<<CS11;
+ 180:	8a e1       	ldi	r24, 0x1A	; 26
+ 182:	8e bd       	out	0x2e, r24	; 46
+	
+	// Init Timer3
+	TCCR3A = 1<<COM3A1 | 1<<WGM31;
+ 184:	90 93 8b 00 	sts	0x008B, r25	; 0x80008b <__TEXT_REGION_LENGTH__+0x7e008b>
+	TCCR3B = 1<<WGM33 | 1<<WGM32 | 1<<CS31;
+ 188:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <__TEXT_REGION_LENGTH__+0x7e008a>
+ 18c:	08 95       	ret
+
+Disassembly of section .text.servoSpeed:
+
+000001ac <servoSpeed>:
+	
+}
+
+// Calculates the adc measurement to servo value
+int servoSpeed(int adc_pot_val){
+	return SERVO_MIN_STATE + adc_pot_val * ADC_TO_SERVO_FACTOR;
+ 1ac:	9c 01       	movw	r18, r24
+ 1ae:	22 0f       	add	r18, r18
+ 1b0:	33 1f       	adc	r19, r19
+ 1b2:	88 0f       	add	r24, r24
+ 1b4:	99 1f       	adc	r25, r25
+ 1b6:	88 0f       	add	r24, r24
+ 1b8:	99 1f       	adc	r25, r25
+ 1ba:	88 0f       	add	r24, r24
+ 1bc:	99 1f       	adc	r25, r25
+ 1be:	82 0f       	add	r24, r18
+ 1c0:	93 1f       	adc	r25, r19
+}
+ 1c2:	88 51       	subi	r24, 0x18	; 24
+ 1c4:	9c 4f       	sbci	r25, 0xFC	; 252
+ 1c6:	08 95       	ret
+
+Disassembly of section .text.main:
+
+000000ea <main>:
+
+
+int main(void)
+{
+	servos_init();
+  ea:	0e 94 ab 00 	call	0x156	; 0x156 <servos_init>
+	ADCSRA = 0b10000110; // ADC enabled, no interrupt, no free running, division by 64.
+  ee:	86 e8       	ldi	r24, 0x86	; 134
+  f0:	86 b9       	out	0x06, r24	; 6
+	DDRF = 0x00;
+  f2:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__TEXT_REGION_LENGTH__+0x7e0061>
+	DDRA = 0xFF;
+  f6:	8f ef       	ldi	r24, 0xFF	; 255
+  f8:	8a bb       	out	0x1a, r24	; 26
+	DDRC = 0xFF;	
+  fa:	84 bb       	out	0x14, r24	; 20
+	
+    while(1)
+    {
+		//Measure potentiometers
+		pot_1_val = adc_read_port(POT_METER_1);
+  fc:	80 e0       	ldi	r24, 0x00	; 0
+  fe:	90 e0       	ldi	r25, 0x00	; 0
+ 100:	0e 94 e4 00 	call	0x1c8	; 0x1c8 <adc_read_port>
+ 104:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <_edata+0x1>
+ 108:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <_edata>
+		pot_2_val = adc_read_port(POT_METER_2);
+ 10c:	81 e0       	ldi	r24, 0x01	; 1
+ 10e:	90 e0       	ldi	r25, 0x00	; 0
+ 110:	0e 94 e4 00 	call	0x1c8	; 0x1c8 <adc_read_port>
+ 114:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <pot_2_val+0x1>
+ 118:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <pot_2_val>
+		
+		//Show potentiometers value on board with LED's
+		PORTA = pot_1_val;
+ 11c:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <_edata>
+ 120:	8b bb       	out	0x1b, r24	; 27
+		PORTC = pot_2_val;
+ 122:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <pot_2_val>
+ 126:	85 bb       	out	0x15, r24	; 21
+		
+		//Adjust servo motor 1 according to potentiometer 1
+		OCR1A = servoSpeed(pot_1_val);
+ 128:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <_edata>
+ 12c:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <_edata+0x1>
+ 130:	0e 94 d6 00 	call	0x1ac	; 0x1ac <servoSpeed>
+ 134:	9b bd       	out	0x2b, r25	; 43
+ 136:	8a bd       	out	0x2a, r24	; 42
+	
+		//Adjust servo motor 2 according to potentiometer 2
+		OCR3A = servoSpeed(pot_2_val);
+ 138:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <pot_2_val>
+ 13c:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <pot_2_val+0x1>
+ 140:	0e 94 d6 00 	call	0x1ac	; 0x1ac <servoSpeed>
+ 144:	90 93 87 00 	sts	0x0087, r25	; 0x800087 <__TEXT_REGION_LENGTH__+0x7e0087>
+ 148:	80 93 86 00 	sts	0x0086, r24	; 0x800086 <__TEXT_REGION_LENGTH__+0x7e0086>
+		
+		//Wait a bit to rest for servo
+		wait(100);
+ 14c:	84 e6       	ldi	r24, 0x64	; 100
+ 14e:	90 e0       	ldi	r25, 0x00	; 0
+ 150:	0e 94 c7 00 	call	0x18e	; 0x18e <wait>
+ 154:	d3 cf       	rjmp	.-90     	; 0xfc <main+0x12>

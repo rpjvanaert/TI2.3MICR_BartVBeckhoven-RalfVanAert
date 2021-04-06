@@ -1,0 +1,194 @@
+
+B.3.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  0000018c  2**0
+                  ALLOC, LOAD, DATA
+  1 .text         000000a4  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      0000002f  00000000  00000000  0000018c  2**0
+                  CONTENTS, READONLY
+  3 .debug_aranges 00000020  00000000  00000000  000001bb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   00000a45  00000000  00000000  000001db  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 0000078a  00000000  00000000  00000c20  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   0000024d  00000000  00000000  000013aa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  00000024  00000000  00000000  000015f8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    0000027d  00000000  00000000  0000161c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    00000058  00000000  00000000  00001899  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000010  00000000  00000000  000018f1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .text         00000004  00000114  00000114  00000188  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 12 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00001904  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .text.main    00000050  000000b6  000000b6  0000012a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .progmemx.data.Numbers 00000011  000000a4  000000a4  00000118  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, PROGMEMX
+ 15 .text.libgcc  0000000e  00000106  00000106  0000017a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+   4:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+   8:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+   c:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  10:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  14:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  18:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  1c:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  20:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  24:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  28:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  2c:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  30:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  34:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  38:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  3c:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  40:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  44:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  48:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  4c:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  50:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  54:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  58:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  5c:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  60:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  64:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  68:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  6c:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  70:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  74:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  78:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  7c:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  80:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  84:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  88:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+  98:	0e 94 5b 00 	call	0xb6	; 0xb6 <main>
+  9c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <_exit>
+
+000000a0 <_exit>:
+  a0:	f8 94       	cli
+
+000000a2 <__stop_program>:
+  a2:	ff cf       	rjmp	.-2      	; 0xa2 <__stop_program>
+
+Disassembly of section .text:
+
+00000114 <__bad_interrupt>:
+ 114:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+
+Disassembly of section .text.main:
+
+000000b6 <main>:
+	0b11111001, // E.
+};
+
+int main(void)
+{
+	DDRD = 0xFF;
+  b6:	8f ef       	ldi	r24, 0xFF	; 255
+  b8:	81 bb       	out	0x11, r24	; 17
+	DDRC = 0x00;
+  ba:	14 ba       	out	0x14, r1	; 20
+	
+	int index = 0;
+	
+	int prevPinC = 0b0;
+  bc:	20 e0       	ldi	r18, 0x00	; 0
+  be:	30 e0       	ldi	r19, 0x00	; 0
+int main(void)
+{
+	DDRD = 0xFF;
+	DDRC = 0x00;
+	
+	int index = 0;
+  c0:	c0 e0       	ldi	r28, 0x00	; 0
+  c2:	d0 e0       	ldi	r29, 0x00	; 0
+	int prevPinC = 0b0;
+	
+    while(1)
+    {
+		
+		if (PINC == 0b01 && prevPinC == 0b0){
+  c4:	83 b3       	in	r24, 0x13	; 19
+  c6:	81 30       	cpi	r24, 0x01	; 1
+  c8:	39 f4       	brne	.+14     	; 0xd8 <main+0x22>
+  ca:	21 15       	cp	r18, r1
+  cc:	31 05       	cpc	r19, r1
+  ce:	21 f4       	brne	.+8      	; 0xd8 <main+0x22>
+			if (index == 16){
+  d0:	c0 31       	cpi	r28, 0x10	; 16
+  d2:	d1 05       	cpc	r29, r1
+  d4:	09 f0       	breq	.+2      	; 0xd8 <main+0x22>
+				index = 16;
+				} else {
+				++index;
+  d6:	21 96       	adiw	r28, 0x01	; 1
+			}
+		}
+		
+		if (PINC == 0b10 && prevPinC == 0b0){
+  d8:	83 b3       	in	r24, 0x13	; 19
+  da:	82 30       	cpi	r24, 0x02	; 2
+  dc:	29 f4       	brne	.+10     	; 0xe8 <main+0x32>
+  de:	23 2b       	or	r18, r19
+  e0:	19 f4       	brne	.+6      	; 0xe8 <main+0x32>
+			if (index == 0){
+  e2:	20 97       	sbiw	r28, 0x00	; 0
+  e4:	09 f0       	breq	.+2      	; 0xe8 <main+0x32>
+				index = 0;
+				} else {
+				--index;
+  e6:	21 97       	sbiw	r28, 0x01	; 1
+			}
+		}
+		
+		prevPinC = PINC;
+  e8:	23 b3       	in	r18, 0x13	; 19
+  ea:	30 e0       	ldi	r19, 0x00	; 0
+		
+		PORTD = Numbers[index];
+  ec:	ce 01       	movw	r24, r28
+  ee:	0d 2e       	mov	r0, r29
+  f0:	00 0c       	add	r0, r0
+  f2:	aa 0b       	sbc	r26, r26
+  f4:	8c 55       	subi	r24, 0x5C	; 92
+  f6:	9f 4f       	sbci	r25, 0xFF	; 255
+  f8:	af 4f       	sbci	r26, 0xFF	; 255
+  fa:	fc 01       	movw	r30, r24
+  fc:	5a 2f       	mov	r21, r26
+  fe:	0e 94 83 00 	call	0x106	; 0x106 <__xload_1>
+ 102:	62 bb       	out	0x12, r22	; 18
+		
+    }
+ 104:	df cf       	rjmp	.-66     	; 0xc4 <main+0xe>
+
+Disassembly of section .text.libgcc:
+
+00000106 <__xload_1>:
+ 106:	57 fd       	sbrc	r21, 7
+ 108:	03 c0       	rjmp	.+6      	; 0x110 <__xload_1+0xa>
+ 10a:	5b bf       	out	0x3b, r21	; 59
+ 10c:	67 91       	elpm	r22, Z+
+ 10e:	08 95       	ret
+ 110:	60 81       	ld	r22, Z
+ 112:	08 95       	ret
