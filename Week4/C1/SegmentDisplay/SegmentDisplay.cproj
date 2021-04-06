@@ -12,9 +12,9 @@
     <OutputFileName>$(MSBuildProjectName)</OutputFileName>
     <OutputFileExtension>.elf</OutputFileExtension>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
-    <AssemblyName>C1</AssemblyName>
-    <Name>C1</Name>
-    <RootNamespace>C1</RootNamespace>
+    <AssemblyName>SegmentDisplay</AssemblyName>
+    <Name>SegmentDisplay</Name>
+    <RootNamespace>SegmentDisplay</RootNamespace>
     <ToolchainFlavour>XC8_2.31</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
